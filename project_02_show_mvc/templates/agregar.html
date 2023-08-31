@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Iniciando</title>
+    <link rel="stylesheet" href="https://bootswatch.com/5/flatly/bootstrap.css">
+    <link rel="stylesheet" href="https://bootswatch.com/_vendor/bootstrap-icons/font/bootstrap-icons.css">
+</head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h1>::{{ oneAttribute }} </h1>
+                </div>
+            </div>
+            
+            
+            <div class="row">
+                <div class="col-md-8  col-sm-12 col-xs-12">
+                    <form method="post" action="/saveuser">
+                        <div class="mb-3 row">
+                            <label for="nombreuser" class="form-label">Email address</label>
+                            <input  value="{{ arrUsuarios[0]['usuarioNombre'] }}"  type="text" class="form-control" id="nombreuser" name="nombreuser" placeholder="nombres" />
+                        </div>
+                        <div class="mb-3 row">
+                            <label for="apellidouser" class="form-label">Example textarea</label>
+                            <input value="{{ arrUsuarios[0]['usuarioApellido'] }}" type="text" class="form-control" id="apellidouser" name="apellidouser" placeholder="apellidos" />
+                        </div>
+                            <input value="{{ userid }}" type="hidden" class="form-control" id="userid" name="userid" />
+                            <button type="submit" class="btn btn-primary">Enviar</button>
+                        
+                    </form>
+                </div><!--endCol12-->    
+            </div><!--endRow-->
+        </div><!--endContainer-->
+
+            
+    </body>
+</html>
